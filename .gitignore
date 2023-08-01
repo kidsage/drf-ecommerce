@@ -1,0 +1,10 @@
+__init__.py
+
+.env
+pytest.ini
+
+**__pycache__/
+.pytest_cache
+db.sqlite
+.cover
+.vscode
