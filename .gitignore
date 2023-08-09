@@ -8,3 +8,4 @@ pytest.ini
 db.sqlite
 .coverage
 .vscode
+schema.yml

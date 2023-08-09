@@ -6,6 +6,7 @@ djangorestframework==3.14.0
 pytest==7.4.0  
 pytest-django==4.5.2  
 django-mptt==0.14.0  
+drf-spectacular=0.26.4
 
 # Commands
 
