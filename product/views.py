@@ -2,8 +2,8 @@ from drf_spectacular.utils import extend_schema
 from rest_framework import viewsets
 from rest_framework.response import Response
 
-from .models import Brand, Category
-from .serializers import BrandSerializer, CategorySerializer
+from .models import Brand, Category, Product
+from .serializers import BrandSerializer, CategorySerializer, ProductSerializer
 
 
 class CategoryViewSet(viewsets.ViewSet):
@@ -29,4 +29,17 @@ class BrandViewSet(viewsets.ViewSet):
     @extend_schema(responses=BrandSerializer)
     def list(self, request):
         serializer = BrandSerializer(self.queryset, many=True)
+        return Response(serializer.data)
+
+
+class ProductViewSet(viewsets.ViewSet):
+    """
+    A simple Viewset for viewing brands
+    """
+
+    queryset = Product.objects.all()
+
+    @extend_schema(responses=ProductSerializer)
+    def list(self, request):
+        serializer = ProductSerializer(self.queryset, many=True)
         return Response(serializer.data)
