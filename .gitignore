@@ -9,3 +9,4 @@ db.sqlite
 .coverage
 .vscode
 schema.yml
+htmlcov/
