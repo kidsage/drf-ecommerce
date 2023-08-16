@@ -9,6 +9,7 @@ django-mptt==0.14.0
 drf-spectacular=0.26.4
 pytest-cov
 coverage
+factory_boy=3.3.0
 
 # Commands
 
